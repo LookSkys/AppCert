@@ -1,4 +1,6 @@
+import 'package:certamen_apps/pages/pag_prueba.dart';
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -6,8 +8,13 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black, // Fondo negro
       appBar: AppBar(
-        title: Text('Login'),
+        backgroundColor: Colors.black, // Color de fondo negro
+        title: Text(
+          'Inicio de Sesion',
+          style: TextStyle(color: Colors.white), // Texto blanco
+        ),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -15,26 +22,68 @@ class Login extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            TextField(
-              decoration: InputDecoration(
-                labelText: 'Email',
-                border: OutlineInputBorder(),
+            SizedBox(
+              height: 40.0,
+              child: Icon(
+                MdiIcons.account,
+                color: Colors.white, // Icono blanco
+                size: 40.0, // Tamaño grande
               ),
             ),
             SizedBox(height: 16.0),
             TextField(
+              style: TextStyle(color: Colors.white), // Texto blanco
+              decoration: InputDecoration(
+                labelText: 'Email',
+                labelStyle: TextStyle(color: Colors.white), // Etiqueta blanca
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white), // Borde blanco
+                ),
+              ),
+            ),
+            SizedBox(height: 16.0),
+            TextField(
+              style: TextStyle(color: Colors.white), // Texto blanco
               obscureText: true,
               decoration: InputDecoration(
                 labelText: 'Password',
-                border: OutlineInputBorder(),
+                labelStyle: TextStyle(color: Colors.white), // Etiqueta blanca
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white), // Borde blanco
+                ),
               ),
             ),
             SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
-                // Aquí iría la lógica para iniciar sesión
+                // Redirigir a otra página
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AnotherPage()),
+                );
               },
-              child: Text('Login'),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                  (Set<MaterialState> states) {
+                    if (states.contains(MaterialState.pressed)) {
+                      return Colors.grey[900]!; // Cambio de color al presionar
+                    }
+                    return Colors.grey[800]!; // Color gris oscuro normal
+                  },
+                ),
+                foregroundColor: MaterialStateProperty.resolveWith<Color>(
+                  (Set<MaterialState> states) {
+                    if (states.contains(MaterialState.pressed)) {
+                      return Colors.white; // Texto blanco al presionar
+                    }
+                    return Colors.grey[100]!; // Texto gris claro normal
+                  },
+                ),
+              ),
+              child: Text(
+                'Login',
+                style: TextStyle(color: Colors.white), // Texto blanco
+              ),
             ),
           ],
         ),
