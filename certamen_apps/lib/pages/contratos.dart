@@ -1,6 +1,5 @@
 import 'package:certamen_apps/pages/contrato.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class Contrato {
@@ -12,6 +11,8 @@ class Contrato {
   final String dangerLevel;
   final String description;
   final String imageUrl; // Cambiar a la ruta de archivo local
+  final String emisor; // Nuevo atributo para el emisor
+  final String organizacion; // Nuevo atributo para la organización
 
   Contrato({
     required this.icon,
@@ -22,6 +23,8 @@ class Contrato {
     required this.dangerLevel,
     required this.description,
     required this.imageUrl,
+    required this.emisor, // Agrega el emisor al constructor
+    required this.organizacion, // Agrega la organización al constructor
   });
 }
 
@@ -31,12 +34,14 @@ class Contratos extends StatelessWidget {
       icon: MdiIcons.knife,
       title: 'Asesinato',
       status: 'Abierto',
-      amount: '\$10,000,000',
-      targetPerson: 'Jhon Wick',
+      amount: '\$10,000,000,000',
+      targetPerson: 'John Wick',
       dangerLevel: 'Alto',
       description:
           'Un contrato para eliminar a un objetivo peligroso que ha traicionado a la organización.',
-      imageUrl: 'assets/images/John_Wick.jpg', // Ruta de archivo local
+      imageUrl: 'assets/images/JohnWick.png', // Ruta de archivo local
+      emisor: 'Vincent Bisset de Gramont', // Emisor del contrato
+      organizacion: 'The High Table', // Organización del contrato
     ),
     Contrato(
       icon: MdiIcons.bowArrow,
@@ -47,7 +52,9 @@ class Contratos extends StatelessWidget {
       dangerLevel: 'Medio',
       description:
           'Se busca capturar a un fugitivo que ha escapado de la prisión de máxima seguridad.',
-      imageUrl: 'assets/images/John_Wick.jpg', // Ruta de archivo local
+      imageUrl: 'assets/images/JohnWick.png', // Ruta de archivo local
+      emisor: 'Matias Ojeda', // Emisor del contrato
+      organizacion: 'USM', // Organización del contrato
     ),
   ];
 
@@ -57,14 +64,14 @@ class Contratos extends StatelessWidget {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
+        iconTheme: IconThemeData(color: Colors.white),
         title: Text(
           'Contratos',
-          style: GoogleFonts.montserrat(
-            textStyle: TextStyle(
-              color: Colors.white,
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-            ),
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 28.0,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'VT323',
           ),
         ),
         centerTitle: true,
@@ -95,12 +102,11 @@ class Contratos extends StatelessWidget {
       ),
       title: Text(
         contrato.title,
-        style: GoogleFonts.montserrat(
-          textStyle: TextStyle(
-            color: Colors.black,
-            fontSize: 16.0,
-            fontWeight: FontWeight.bold,
-          ),
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 20.0,
+          fontWeight: FontWeight.bold,
+          fontFamily: 'VT323',
         ),
       ),
       subtitle: Column(
@@ -108,38 +114,34 @@ class Contratos extends StatelessWidget {
         children: [
           Text(
             'Estado: ${contrato.status}',
-            style: GoogleFonts.montserrat(
-              textStyle: TextStyle(
-                color: Colors.black,
-                fontSize: 14.0,
-              ),
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 16.0,
+              fontFamily: 'VT323',
             ),
           ),
           Text(
             'Monto: ${contrato.amount}',
-            style: GoogleFonts.montserrat(
-              textStyle: TextStyle(
-                color: Colors.black,
-                fontSize: 14.0,
-              ),
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 16.0,
+              fontFamily: 'VT323',
             ),
           ),
           Text(
             'Persona Objetivo: ${contrato.targetPerson}',
-            style: GoogleFonts.montserrat(
-              textStyle: TextStyle(
-                color: Colors.black,
-                fontSize: 14.0,
-              ),
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 16.0,
+              fontFamily: 'VT323',
             ),
           ),
           Text(
             'Nivel de Peligro: ${contrato.dangerLevel}',
-            style: GoogleFonts.montserrat(
-              textStyle: TextStyle(
-                color: Colors.black,
-                fontSize: 14.0,
-              ),
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 16.0,
+              fontFamily: 'VT323',
             ),
           ),
         ],
@@ -152,6 +154,8 @@ class Contratos extends StatelessWidget {
               titulo: contrato.title,
               descripcion: contrato.description,
               imageUrl: contrato.imageUrl,
+              emisor: contrato.emisor, // Pasar el emisor
+              organizacion: contrato.organizacion, // Pasar la organización
             ),
           ),
         );

@@ -1,4 +1,5 @@
 import 'package:certamen_apps/pages/contratos.dart';
+import 'package:certamen_apps/pages/hoteles.dart';
 import 'package:certamen_apps/pages/login.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
         useMaterial3: true,
       ),
-      home: Contratos(),
+      home: HotelesPage(),
     );
   }
 }

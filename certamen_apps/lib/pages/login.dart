@@ -13,8 +13,13 @@ class Login extends StatelessWidget {
         backgroundColor: Colors.black, // Color de fondo negro
         title: Text(
           'Inicio de Sesion',
-          style: TextStyle(color: Colors.white), // Texto blanco
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'VT323',
+            fontSize: 28.0,
+          ),
         ),
+        centerTitle: true,
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -27,7 +32,7 @@ class Login extends StatelessWidget {
               child: Icon(
                 MdiIcons.account,
                 color: Colors.white, // Icono blanco
-                size: 40.0, // Tamaño grande
+                size: 50.0, // Tamaño grande
               ),
             ),
             SizedBox(height: 16.0),
@@ -35,7 +40,11 @@ class Login extends StatelessWidget {
               style: TextStyle(color: Colors.white), // Texto blanco
               decoration: InputDecoration(
                 labelText: 'Email',
-                labelStyle: TextStyle(color: Colors.white), // Etiqueta blanca
+                labelStyle: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'VT323',
+                  fontSize: 20.0,
+                ), // Etiqueta blanca
                 border: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.white), // Borde blanco
                 ),
@@ -47,7 +56,11 @@ class Login extends StatelessWidget {
               obscureText: true,
               decoration: InputDecoration(
                 labelText: 'Password',
-                labelStyle: TextStyle(color: Colors.white), // Etiqueta blanca
+                labelStyle: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'VT323',
+                  fontSize: 20.0,
+                ), // Etiqueta blanca
                 border: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.white), // Borde blanco
                 ),
@@ -82,7 +95,11 @@ class Login extends StatelessWidget {
               ),
               child: Text(
                 'Login',
-                style: TextStyle(color: Colors.white), // Texto blanco
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'VT323',
+                  fontSize: 20.0,
+                ), // Texto blanco
               ),
             ),
           ],
