@@ -1,4 +1,5 @@
 import 'package:certamen_apps/pages/prueba.dart';
+import 'package:certamen_apps/pages/serv_page.dart';
 import 'package:certamen_apps/pages/servicios_page.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ServiciosPage(),
+      home: ServPage(),
     );
   }
 }
