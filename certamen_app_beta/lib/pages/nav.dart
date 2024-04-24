@@ -1,6 +1,7 @@
-import 'package:certamen_app_beta/pages/tabs/AnotherPage.dart';
 import 'package:certamen_app_beta/pages/tabs/contratos.dart';
+import 'package:certamen_app_beta/pages/tabs/hoteles.dart';
 import 'package:certamen_app_beta/pages/tabs/perfil.dart';
+import 'package:certamen_app_beta/pages/tabs/servicios_page.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -16,13 +17,14 @@ class _Nav3PageState extends State<Nav> {
   List<Widget> paginas = [
     PerfilPage(),
     ContratosPage(),
-    AnotherPage(),
-    AnotherPage(),
+    ServiciosPage(),
+    HotelesPage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'VT323',
       ),

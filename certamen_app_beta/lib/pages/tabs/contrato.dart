@@ -99,28 +99,19 @@ class DescripcionContratoPage extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.resolveWith<Color>(
                     (Set<MaterialState> states) {
                       if (states.contains(MaterialState.pressed)) {
-                        return Colors
-                            .grey[900]!; // Cambio de color al presionar
+                        return Colors.red; // Cambio de color al presionar
                       }
-                      return Colors.grey[800]!; // Color gris oscuro normal
-                    },
-                  ),
-                  foregroundColor: MaterialStateProperty.resolveWith<Color>(
-                    (Set<MaterialState> states) {
-                      if (states.contains(MaterialState.pressed)) {
-                        return Colors.white; // Texto blanco al presionar
-                      }
-                      return Colors.grey[100]!; // Texto gris claro normal
+                      return Colors.white; // Color gris oscuro normal
                     },
                   ),
                 ),
                 child: Text(
                   'Inscripción',
                   style: TextStyle(
-                    fontSize: 20.0,
-                    color: Colors.white,
-                    fontFamily: 'VT323',
-                  ),
+                      fontSize: 20.0,
+                      color: Colors.black,
+                      fontFamily: 'VT323',
+                      fontWeight: FontWeight.bold),
                 ),
               ),
             ],
