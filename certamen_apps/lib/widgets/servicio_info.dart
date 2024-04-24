@@ -32,12 +32,12 @@ ServicioDetalle({required this.nombre_servicio, required this.nombre, required t
             //CUADRO DE INFO
             Text(this.nombre_servicio, style: estilo_nombre),
                     Container(
-                      height: 200,
+                      height: 250,
                       width: MediaQuery.of(context).size.width,
                       margin: EdgeInsets.only(top: 10),
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white, width: 5),
+                        border: Border.all(color: Colors.green, width: 5),
                         borderRadius: BorderRadius.all(Radius.circular(5)),
                       ),
                       child: Column(
@@ -66,6 +66,10 @@ ServicioDetalle({required this.nombre_servicio, required this.nombre, required t
                               Text(this.tipo_servicio, style: estilo_dato),
                             ],
                           ),
+                          SizedBox(height: 40),
+                          OutlinedButton(
+                            onPressed: (){Navigator.pushNamed(context, '/infoServicios');}, 
+                            child: Text('Adquirir', style: estilo_dato,))
                         ],
                       ),
                     ),

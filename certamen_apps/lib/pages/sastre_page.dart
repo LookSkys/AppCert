@@ -21,7 +21,7 @@ class SastrePage extends StatelessWidget {
               foto: 'sastre.jpg', 
               lugar: 'Italia', 
               horario: '12:30AM - 22:00PM', 
-              tipo_servicio: 'Proporcion de trajes \ncon resistencia a balas'
+              tipo_servicio: 'Proporcion de trajes antibalas'
               )
           ],
         ),  
