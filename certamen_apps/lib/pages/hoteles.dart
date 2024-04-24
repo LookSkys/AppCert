@@ -95,28 +95,7 @@ class HotelesPage extends StatelessWidget {
       ),
       onTap: () {
         // Aquí puedes manejar la acción al hacer clic en el hotel
-        _showImageDialog(context, hotel.paisaje);
       },
-    );
-  }
-
-  void _showImageDialog(BuildContext context, String imageUrl) {
-    showDialog(
-      context: context,
-      builder: (_) => AlertDialog(
-        content: Image.asset(
-          imageUrl,
-          fit: BoxFit.cover,
-        ),
-        actions: [
-          TextButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            child: Text('Cerrar'),
-          ),
-        ],
-      ),
     );
   }
 }

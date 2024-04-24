@@ -1,4 +1,4 @@
-import 'package:certamen_apps/pages/contratos.dart';
+import 'package:certamen_apps/pages/nav.dart';
 import 'package:flutter/material.dart';
 
 class Formulario extends StatelessWidget {
@@ -118,7 +118,7 @@ class Formulario extends StatelessWidget {
                   // Redirigir a otra página
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Contratos()),
+                    MaterialPageRoute(builder: (context) => Nav()),
                   );
                 },
                 child: Text(

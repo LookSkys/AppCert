@@ -70,7 +70,6 @@ class Contratos extends StatelessWidget {
           style: TextStyle(
             color: Colors.white,
             fontSize: 28.0,
-            fontWeight: FontWeight.bold,
             fontFamily: 'VT323',
           ),
         ),
