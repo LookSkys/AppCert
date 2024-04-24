@@ -1,3 +1,4 @@
+import 'package:certamen_apps/widgets/appbar_asesinos.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -12,21 +13,8 @@ class ServPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       //APPBAR
-      appBar: AppBar(
-              backgroundColor: Colors.black,
-              title: Text(
-                'Lista de Servicios',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 28.0,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'VT323',
-                ),
-              ),
-              centerTitle: true,
-              iconTheme: IconThemeData(color: Colors.white),
-            ),
-            //LISTA DE SERVICIOS      
+      appBar: AppbarAsesinos(nombre_appbar: 'Lista de Servicios'),
+      //LISTA DE SERVICIOS      
       body: Padding(
         padding: EdgeInsets.all(50),
         child: ListView(
@@ -38,7 +26,7 @@ class ServPage extends StatelessWidget {
               leading: Icon(MdiIcons.pistol, color: Colors.blue, size: 40),
               trailing: Icon(MdiIcons.arrowRight,size: 20, color: Colors.green),
               onTap: () {
-                Navigator.pushNamed(context, '/PerfilPage');
+                Navigator.pushNamed(context, '/sommelier');
               },
             ),
             Divider(color: Colors.white, thickness: 5),
@@ -47,6 +35,9 @@ class ServPage extends StatelessWidget {
               subtitle: Text('servicio médico de urgencia', style: estilo_dato),
               leading: Icon(MdiIcons.heart, color: Colors.red, size: 40),
               trailing: Icon(MdiIcons.arrowRight,size: 20, color: Colors.green),
+              onTap: () {
+                Navigator.pushNamed(context, '/doctor');
+              },
             ),
             Divider(color: Colors.white, thickness: 5),
             ListTile(
@@ -54,6 +45,9 @@ class ServPage extends StatelessWidget {
               subtitle: Text('proporciona trajes con resistencia a balas', style: estilo_dato),
               leading: Icon(MdiIcons.hanger, color: Colors.grey, size: 40),
               trailing: Icon(MdiIcons.arrowRight,size: 20, color: Colors.green),
+              onTap: () {
+                Navigator.pushNamed(context, '/sastre');
+              },
             ),
             Divider(color: Colors.white, thickness: 5),
             ListTile(
@@ -61,6 +55,9 @@ class ServPage extends StatelessWidget {
               subtitle: Text('aseo al lugar de asesinato y gestion de cadaveres', style: estilo_dato),
               leading: Icon(MdiIcons.broom, color: Colors.brown, size: 40),
               trailing: Icon(MdiIcons.arrowRight,size: 20, color: Colors.green),
+              onTap: () {
+                Navigator.pushNamed(context, '/limpiadores');
+              },
             ),
             Divider(color: Colors.white, thickness: 5),
           ],

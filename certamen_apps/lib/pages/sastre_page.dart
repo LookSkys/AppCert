@@ -3,8 +3,8 @@ import 'package:certamen_apps/widgets/servicio_info.dart';
 import 'package:flutter/material.dart';
 
 
-class SommelierPage extends StatelessWidget {
-  const SommelierPage({super.key});
+class SastrePage extends StatelessWidget {
+  const SastrePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,12 +16,12 @@ class SommelierPage extends StatelessWidget {
         child: Column(
           children: [
             ServicioDetalle(
-              nombre_servicio: 'Sommelier',
+              nombre_servicio: 'Sastre',
               nombre: 'Desconocido', 
-              foto: 'sommelier.jpg', 
-              lugar: 'Reino Unido', 
-              horario: '7:00AM - 15:00PM', 
-              tipo_servicio: 'Proporción de armas y munición'
+              foto: 'sastre.jpg', 
+              lugar: 'Italia', 
+              horario: '12:30AM - 22:00PM', 
+              tipo_servicio: 'Proporcion de trajes \ncon resistencia a balas'
               )
           ],
         ),  

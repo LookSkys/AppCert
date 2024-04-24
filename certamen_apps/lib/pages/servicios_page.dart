@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+
 
 class ServiciosPage extends StatelessWidget {
   const ServiciosPage({super.key});
@@ -10,8 +10,8 @@ class ServiciosPage extends StatelessWidget {
     TextStyle estilo_dato = TextStyle(fontSize: 17, fontFamily: 'VT323',color: Colors.white);
     final String mi_parrafo = 'En esta sección encontrará los servicios\n'
                               'disponibles para asesinos, solo debe presionar\n'                                                                       
-                              'el que desea adquirir y se desplegaran los\n'
-                              'detalles de este.\n\n\n\n';
+                              'el que desea adquirir y se desplegaran todos\n'
+                              'los detalles de este.\n\n\n\n';
 
     return Scaffold(
       backgroundColor: Colors.black,

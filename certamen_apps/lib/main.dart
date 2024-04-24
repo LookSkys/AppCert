@@ -1,4 +1,7 @@
+import 'package:certamen_apps/pages/doctor_page.dart';
+import 'package:certamen_apps/pages/limpiadores_page.dart';
 import 'package:certamen_apps/pages/prueba.dart';
+import 'package:certamen_apps/pages/sastre_page.dart';
 import 'package:certamen_apps/pages/serv_page.dart';
 import 'package:certamen_apps/pages/servicios_page.dart';
 import 'package:certamen_apps/pages/sommelier_page.dart';
@@ -42,8 +45,11 @@ class MyApp extends StatelessWidget {
         '/infoServicios': (context) => ServiciosPage(),
         '/listaServicios': (context) => ServPage(),
         '/sommelier': (context) => SommelierPage(),
+        '/doctor': (context) => DoctorPage(),
+        '/sastre': (context) => SastrePage(),
+        '/limpiadores': (context) => LimpiadoresPage(),
       },
-      initialRoute: '/sommelier',
+      initialRoute: '/infoServicios',
     );
   }
 }
