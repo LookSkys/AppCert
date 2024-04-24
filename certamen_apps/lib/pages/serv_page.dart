@@ -6,11 +6,11 @@ class ServPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextStyle estilo_nombre = TextStyle(fontSize: 40,fontWeight: FontWeight.bold,fontFamily: 'VT323' ,color: Colors.white);
     TextStyle estilo_seccion = TextStyle(fontSize: 19,fontWeight: FontWeight.bold,fontFamily: 'VT323',color: Colors.white);
     TextStyle estilo_dato = TextStyle(fontSize: 17, fontFamily: 'VT323',color: Colors.white);
 
     return Scaffold(
+      backgroundColor: Colors.black,
       //APPBAR
       appBar: AppBar(
               backgroundColor: Colors.black,
@@ -24,39 +24,45 @@ class ServPage extends StatelessWidget {
                 ),
               ),
               centerTitle: true,
+              iconTheme: IconThemeData(color: Colors.white),
             ),
             //LISTA DE SERVICIOS      
       body: Padding(
-        padding: EdgeInsets.all(8),
+        padding: EdgeInsets.all(50),
         child: ListView(
           children: [
+            Divider(color: Colors.white, thickness: 5),
             ListTile(
-              title: Text('Sommelier'),
-              subtitle: Text('proporciona armas y munición'),
-              leading: Icon(MdiIcons.pistol, color: Colors.orange, size: 40),
-              trailing: Icon(MdiIcons.arrowRight,size: 20,),
+              title: Text('Sommelier', style: estilo_seccion),
+              subtitle: Text('proporciona armas y munición', style: estilo_dato),
+              leading: Icon(MdiIcons.pistol, color: Colors.blue, size: 40),
+              trailing: Icon(MdiIcons.arrowRight,size: 20, color: Colors.green),
+              onTap: () {
+                Navigator.pushNamed(context, '/PerfilPage');
+              },
             ),
-            Divider(),
+            Divider(color: Colors.white, thickness: 5),
             ListTile(
-              title: Text('Doctor'),
-              subtitle: Text('servicio médico de urgencia'),
-              leading: Icon(MdiIcons.heart, color: Colors.orange, size: 40),
-              trailing: Icon(MdiIcons.arrowRight,size: 20,),
+              title: Text('Doctor', style: estilo_seccion),
+              subtitle: Text('servicio médico de urgencia', style: estilo_dato),
+              leading: Icon(MdiIcons.heart, color: Colors.red, size: 40),
+              trailing: Icon(MdiIcons.arrowRight,size: 20, color: Colors.green),
             ),
-            Divider(),
+            Divider(color: Colors.white, thickness: 5),
             ListTile(
-              title: Text('Sastre'),
-              subtitle: Text('proporciona trajes con resistencia a balas'),
-              leading: Icon(MdiIcons.hanger, color: Colors.orange, size: 40),
-              trailing: Icon(MdiIcons.arrowRight,size: 20,),
+              title: Text('Sastre', style: estilo_seccion),
+              subtitle: Text('proporciona trajes con resistencia a balas', style: estilo_dato),
+              leading: Icon(MdiIcons.hanger, color: Colors.grey, size: 40),
+              trailing: Icon(MdiIcons.arrowRight,size: 20, color: Colors.green),
             ),
-            Divider(),
+            Divider(color: Colors.white, thickness: 5),
             ListTile(
-              title: Text('Limpiadores'),
-              subtitle: Text('aseo en lugar de asesinato y gestion de cadaveres'),
-              leading: Icon(MdiIcons.broom, color: Colors.orange, size: 40),
-              trailing: Icon(MdiIcons.arrowRight,size: 20,),
+              title: Text('Limpiadores', style: estilo_seccion),
+              subtitle: Text('aseo al lugar de asesinato y gestion de cadaveres', style: estilo_dato),
+              leading: Icon(MdiIcons.broom, color: Colors.brown, size: 40),
+              trailing: Icon(MdiIcons.arrowRight,size: 20, color: Colors.green),
             ),
+            Divider(color: Colors.white, thickness: 5),
           ],
         ),
       ),

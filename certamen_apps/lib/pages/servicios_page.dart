@@ -34,7 +34,7 @@ class ServiciosPage extends StatelessWidget {
                           Text('Información\n', style: estilo_seccion),
                           Text(mi_parrafo, style: estilo_dato),
                           OutlinedButton(
-                            onPressed: (){Navigator.pop(context);}, 
+                            onPressed: (){Navigator.pushNamed(context, '/listaServicios');}, 
                             child: Text('Servicios', style: estilo_dato,))
                         ],
                       ),
