@@ -1,6 +1,7 @@
 import 'package:certamen_apps/pages/contratos.dart';
 import 'package:certamen_apps/pages/hoteles.dart';
 import 'package:certamen_apps/pages/login.dart';
+import 'package:certamen_apps/pages/nav.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
         useMaterial3: true,
       ),
-      home: Contratos(),
+      home: Nav(),
     );
   }
 }
