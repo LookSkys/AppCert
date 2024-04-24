@@ -1,4 +1,4 @@
-import 'package:certamen_apps/pages/nav.dart';
+import 'package:certamen_apps/pages/pag_prueba.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -72,7 +72,7 @@ class Login extends StatelessWidget {
                 // Redirigir a otra página
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Nav()),
+                  MaterialPageRoute(builder: (context) => AnotherPage()),
                 );
               },
               style: ButtonStyle(
