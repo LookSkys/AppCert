@@ -101,7 +101,7 @@ class Login extends StatelessWidget {
                     ElevatedButton(
                       onPressed: () {
                         // Redirigir a otra página
-                        Navigator.push(
+                        Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(builder: (context) => Nav()),
                         );

@@ -28,7 +28,7 @@ class ServiciosPage extends StatelessWidget {
               Container(
                 height: 450,
                 width: MediaQuery.of(context).size.width,
-                margin: EdgeInsets.only(top: 200),
+                margin: EdgeInsets.only(top: 100),
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.green, width: 5),
